@@ -1,0 +1,31 @@
+.main{
+    text-align: center;
+    border:1.5px solid dodgerblue;
+    border-radius: 5px;
+    width:35%;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+input{
+    margin: 10px;
+    padding: 5px;
+}
+button{
+    margin: 10px;
+    padding: 5px;
+    background-color: dodgerblue;
+    width:20%;
+    color: white;
+    font-weight: bold;
+    border: 1px dodgerblue;
+    border-radius: 3px;
+}
+h1{
+    color: dodgerblue;
+}
+a{
+    color: rgb(104, 44, 178);
+    font-weight: bold;
+    text-decoration: none;
+    
+}
