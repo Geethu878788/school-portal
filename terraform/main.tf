@@ -18,11 +18,17 @@ resource "aws_instance" "example" {
   provisioner "remote-exec" {
     inline = [
       "sudo yum update -y",
-      "npm install -g http-server",
       "sudo yum install git -y",
       "mkdir project",
+      "sudo yum install -y nodejs npm",
+      "node --version",
+      "npm --version",
       "cd project",
-      "git clone https://github.com/Geethu878788/school-portal"
+      "git clone https://github.com/Geethu878788/school-portal",
+      "cd school-portal",
+      "src",
+      "sudo npm install -g http-server",
+      "http-server -p 5500"
     ]
     
     connection {
