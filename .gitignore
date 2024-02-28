@@ -1,0 +1,6 @@
+text.txt
+
+
+#terraform files
+.terraform
+.terraform.lock.hcl
