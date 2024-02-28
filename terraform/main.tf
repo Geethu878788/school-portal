@@ -19,6 +19,7 @@ resource "aws_instance" "example" {
     inline = [
       "sudo yum update -y",
       "npm install -g http-server",
+      "sudo yum install git -y",
       "mkdir project",
       "cd project",
       "git clone https://github.com/Geethu878788/school-portal"
