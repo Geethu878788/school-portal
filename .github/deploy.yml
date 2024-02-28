@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - master  # or whatever branch you want to trigger on
-    paths:
-      - .github/workflows/deploy.yml
-      - terraform/main.tf 
+    # paths:
+    #   - .github/workflows/deploy.yml
+    #   - terraform/main.tf 
       
 jobs:
   deploy:
