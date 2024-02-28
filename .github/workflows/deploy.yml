@@ -15,6 +15,7 @@ jobs:
       PRIVATE_KEY_BASE64: ${{ secrets.BASE64_PRIVATE_KEY_RSA }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_RSA_KEY: ${{secrets.PRIVATE_KEY_RSA}}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -30,6 +31,12 @@ jobs:
         
       # - name: Build React app
       #   run: npm run build
+      - name: Print Environment Variables
+        run: |
+          echo "PRIVATE_KEY_BASE64: $PRIVATE_KEY_BASE64"
+          echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
+          echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
+          echo "AWS_RSA_KEY"
 
       - name: Terraform Init
         run: |
