@@ -6,7 +6,7 @@ on:
       - master  # or whatever branch you want to trigger on
     paths:
       - .github/workflows/deploy.yml
-      - terraform/main.tf 
+      - terraform/main.tf   
       
 jobs:
   deploy:
