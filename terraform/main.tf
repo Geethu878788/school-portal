@@ -26,7 +26,7 @@ resource "aws_instance" "example" {
       "cd project",
       "git clone https://github.com/Geethu878788/school-portal",
       "cd school-portal",
-      "src",
+      "cd src",
       "sudo npm install -g http-server",
       "http-server -p 5500"
     ]
