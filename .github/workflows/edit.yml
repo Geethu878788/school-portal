@@ -29,6 +29,7 @@ jobs:
             username: ec2-user
             key: ${{env.PRIVATE_KEY2}}
             script: |
-              mkdir hello
+              cd project/school-portal
+              git pull origin
         env:
           DEBUG: true
