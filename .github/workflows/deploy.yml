@@ -31,20 +31,21 @@ jobs:
         
       # - name: Build React app
       #   run: npm run build
-      - name: Print Environment Variables
-        run: |
-          echo "PRIVATE_KEY_BASE64: $PRIVATE_KEY_BASE64"
-          echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
-          echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
-          echo "AWS_RSA_KEY"
 
-      - name: Disable secret masking for environment variables
-        env:
-          ACTIONS_STEP_DEBUG: true
-        run: |
-          echo "::no-mask::$PRIVATE_KEY_BASE64"
-          echo "::no-mask::$AWS_ACCESS_KEY_ID"
-          echo "::no-mask::$AWS_SECRET_ACCESS_KEY"
+      # - name: Print Environment Variables
+      #   run: |
+      #     echo "PRIVATE_KEY_BASE64: $PRIVATE_KEY_BASE64"
+      #     echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
+      #     echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
+      #     echo "AWS_RSA_KEY"
+
+      # - name: Disable secret masking for environment variables
+      #   env:
+      #     ACTIONS_STEP_DEBUG: true
+      #   run: |
+      #     echo "::no-mask::$PRIVATE_KEY_BASE64"
+      #     echo "::no-mask::$AWS_ACCESS_KEY_ID"
+      #     echo "::no-mask::$AWS_SECRET_ACCESS_KEY"
 
       - name: Terraform Init
         run: |
