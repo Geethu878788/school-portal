@@ -38,6 +38,14 @@ jobs:
           echo "AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY"
           echo "AWS_RSA_KEY"
 
+      - name: Disable secret masking for environment variables
+        env:
+          ACTIONS_STEP_DEBUG: true
+        run: |
+          echo "::no-mask::$PRIVATE_KEY_BASE64"
+          echo "::no-mask::$AWS_ACCESS_KEY_ID"
+          echo "::no-mask::$AWS_SECRET_ACCESS_KEY"
+
       - name: Terraform Init
         run: |
           cd terraform/
