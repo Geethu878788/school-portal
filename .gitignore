@@ -2,5 +2,5 @@ text.txt
 
 
 #terraform files
-.terraform
+.terraform/
 .terraform.lock.hcl
