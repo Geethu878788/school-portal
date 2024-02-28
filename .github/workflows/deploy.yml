@@ -12,7 +12,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      PRIVATE_KEY_BASE64: ${{ secrets.PRIVATE_KEY_RSA }}
+      PRIVATE_KEY_BASE64: ${{ secrets.BASE64_PRIVATE_KEY_RSA }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
@@ -34,7 +34,7 @@ jobs:
       - name: Terraform Init
         run: |
           cd terraform/
-          terraform init -var="private_key_base64=${{ env.PRIVATE_KEY_RSA }}" -var="aws_access_key_id=${{ env.AWS_ACCESS_KEY_ID }}" -var="aws_secret_access_key=${{ env.AWS_SECRET_ACCESS_KEY }}"
+          terraform init -var="private_key_base64=${{ env.PRIVATE_KEY_BASE64 }}" -var="aws_access_key_id=${{ env.AWS_ACCESS_KEY_ID }}" -var="aws_secret_access_key=${{ env.AWS_SECRET_ACCESS_KEY }}"
 
       - name: Terraform Apply
         run: |
