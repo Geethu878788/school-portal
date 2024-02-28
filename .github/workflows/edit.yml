@@ -6,7 +6,7 @@ on:
       - main  
     paths:
       - 'src/*'  
-      - '.github/workflows/edit-instance.yml'
+      - '.github/workflows/edit.yml'
 
 jobs:
   edit-instance:
