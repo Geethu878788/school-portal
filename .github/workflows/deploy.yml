@@ -39,4 +39,4 @@ jobs:
       - name: Terraform Apply
         run: |
           cd terraform/
-          terraform apply -auto-approve -var="private_key_base64=${{ env.PRIVATE_KEY_BASE64 }}" -var="aws_access_key_id=${{ env.AWS_ACCESS_KEY_ID }}" -var="aws_secret_access_key=${{ env.AWS_SECRET_ACCESS_KEY }}"
+          terraform apply -auto-approve -var="private_ky_base64=${{ env.PRIVATE_KEY_BASE64 }}" -var="aws_access_key_id=${{ env.AWS_ACCESS_KEY_ID }}" -var="aws_secret_access_key=${{ env.AWS_SECRET_ACCESS_KEY }}"
